@@ -22,7 +22,7 @@ export default class App extends React.Component {
             onChangeText={this._controlNewToDo} 
             returnKeyType={"done"}
           />
-          <ScrollView>
+          <ScrollView contentContainerStyle={styles.toDos}>
             <ToDo />
           </ScrollView>
         </View>
@@ -73,8 +73,12 @@ const styles = StyleSheet.create({
   },
   input: {
     fontSize:15,
-    padding: 20,
+    padding: 15,
     borderBottomColor: "#bbb",
     borderBottomWidth: 1
+  },
+  toDos:{
+    paddingLeft: 30,
+    alignItems: "center"
   }
 });
